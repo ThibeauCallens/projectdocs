@@ -44,13 +44,15 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 2.5em;
+  top: 100%;
   left: 0;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   overflow: hidden;
   z-index: 10;
+  min-width: 150px;
+  margin-top: 0.5em;
 }
 
 .dropdown-content a {
@@ -64,6 +66,7 @@
   background: #ffe0c2;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
   display: block;
 }
