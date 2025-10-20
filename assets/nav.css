@@ -1,28 +1,69 @@
-/* Navigation */
-
-.vertical-buttons {
-    font-family: 'Montserrat';
-    text-transform: uppercase;
-    font-weight: bold;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column; /* stack vertically */
-    gap: 10px; /* space between buttons */
+.navbar {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.vertical-buttons li a {
-    display: block;           /* makes the entire link clickable */
-    padding: 0px 0px;
-    background-color: inherit;
-    color: inherit;
-    text-decoration: none;
-    border-radius: 6px;
-    text-align: left;
-    font-size: 4em;
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 1.5em;
 }
 
-.vertical-buttons li a:hover {
-    text-decoration: underline;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Dropdownmenu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 2.5em;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 0.75em 1.5em;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background: #ffe0c2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
